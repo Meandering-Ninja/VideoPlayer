@@ -42,7 +42,7 @@ function App() {
         <h1>DJ Anand Dholakpur Vaale</h1>
         <ReactPlayer url= {list[count]} controls={true} playing={true} // Enable default player controls
           width="90vw"
-          height="60vh"/>
+          height="50vh"/>
 
         <div className='butt'>
       <input class = 'bttn' id='Pre' type='button' value='Previous' onClick={btnP} ></input>
