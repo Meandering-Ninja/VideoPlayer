@@ -73,20 +73,23 @@
 }
 
 .ReactPlayer {
-  width: 90vw; /* Width of the player relative to viewport width */
-  height: 50vh; /* Height of the player relative to viewport height */
-  max-width: 1200px; /* Optional: max width of the player */
-  max-height: 800px; /* Optional: max height of the player */
+  width: 100vw; /* Full width of the viewport */
+  height: 56.25vw; /* Maintain a 16:9 aspect ratio */
+  max-width: 1200px; /* Optional: Set a max width */
+  max-height: 675px; /* Optional: Set a max height to maintain aspect ratio */
+  object-fit: cover; /* Ensures content fits within dimensions */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .ReactPlayer {
-    width: 95vw; /* Adjust player width on small screens */
-    height: 40vh; /* Adjust player height on small screens */
+    width: 100vw; /* Full width on small screens */
+    height: 56.25vw; /* Maintain aspect ratio on small screens */
   }
+}
+
 
   .bttn {
     font-size: 14px; /* Smaller button text on small screens */
     padding: 8px 16px; /* Adjust padding for better fit on small screens */
   }
-}
+
