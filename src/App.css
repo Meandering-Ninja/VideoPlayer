@@ -13,15 +13,25 @@
   }
 }
 
+@keyframes backgroundColorChange {
+  0% { background-color: #d63814; }
+  25% { background-color: #ff7f50; } /* Coral */
+  50% { background-color: #20b2aa; } /* LightSeaGreen */
+  75% { background-color: #1e90ff; } /* DodgerBlue */
+  100% { background-color: #d63814; } /* Back to original */
+}
+
 .App-header {
-  background-color: #282c34;
+  animation: backgroundColorChange 5s infinite;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  padding: 20px; /* Add padding for better spacing */
 }
 
 .App-link {
@@ -34,5 +44,49 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.butt {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  margin-top: 20px;
+}
+
+.bttn {
+  margin: 0 10px; /* Add horizontal space between buttons */
+  padding: 10px 20px; /* Optional: Add padding for better button appearance */
+  border-radius: 3rem;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#Pre {
+  background-color: #61dafb;
+}
+
+#Nex {
+  background-color: rgb(89, 243, 89);
+}
+
+.ReactPlayer {
+  width: 90vw; /* Width of the player relative to viewport width */
+  height: 50vh; /* Height of the player relative to viewport height */
+  max-width: 1200px; /* Optional: max width of the player */
+  max-height: 800px; /* Optional: max height of the player */
+}
+
+@media (max-width: 768px) {
+  .ReactPlayer {
+    width: 95vw; /* Adjust player width on small screens */
+    height: 40vh; /* Adjust player height on small screens */
+  }
+
+  .bttn {
+    font-size: 14px; /* Smaller button text on small screens */
+    padding: 8px 16px; /* Adjust padding for better fit on small screens */
   }
 }
